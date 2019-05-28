@@ -28,7 +28,9 @@ module.exports = resolver => ({
   update_definition: {
     type: Result,
     args: {
-      _id: new GraphQLNonNull(GraphQLID),
+      _id: {
+        type: new GraphQLNonNull(GraphQLID)
+      },
       fields: {
         type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(Field)))
       }
@@ -45,7 +47,9 @@ module.exports = resolver => ({
   disable_definition: {
     type: Result,
     args: {
-      _id: new GraphQLNonNull(GraphQLID)
+      _id: {
+        type: new GraphQLNonNull(GraphQLID)
+      }
     },
     resolve: async (root, args, context) => {
       return await resolver({
@@ -59,7 +63,9 @@ module.exports = resolver => ({
   enable_definition: {
     type: Result,
     args: {
-      _id: new GraphQLNonNull(GraphQLID)
+      _id: {
+        type: new GraphQLNonNull(GraphQLID)
+      }
     },
     resolve: async (root, args, context) => {
       return await resolver({
@@ -73,7 +79,9 @@ module.exports = resolver => ({
   delete_definition: {
     type: Result,
     args: {
-      _id: new GraphQLNonNull(GraphQLID)
+      _id: {
+        type: new GraphQLNonNull(GraphQLID)
+      }
     },
     resolve: async (root, args, context) => {
       return await resolver({

@@ -21,7 +21,9 @@ module.exports = resolver => ({
   disable_bucket: {
     type: Result,
     args: {
-      _id: new GraphQLNonNull(GraphQLID)
+      _id: {
+        type: new GraphQLNonNull(GraphQLID)
+      }
     },
     resolve: async (root, args, context) => {
       return await resolver({
@@ -35,7 +37,9 @@ module.exports = resolver => ({
   enable_bucket: {
     type: Result,
     args: {
-      _id: new GraphQLNonNull(GraphQLID)
+      _id: {
+        type: new GraphQLNonNull(GraphQLID)
+      }
     },
     resolve: async (root, args, context) => {
       return await resolver({
@@ -49,7 +53,9 @@ module.exports = resolver => ({
   delete_bucket: {
     type: Result,
     args: {
-      _id: new GraphQLNonNull(GraphQLID)
+      _id: {
+        type: new GraphQLNonNull(GraphQLID)
+      }
     },
     resolve: async (root, args, context) => {
       return await resolver({
