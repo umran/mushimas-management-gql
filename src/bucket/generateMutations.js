@@ -1,5 +1,5 @@
 const { GraphQLObjectType, GraphQLList, GraphQLID, GraphQLString, GraphQLNonNull } = require('graphql')
-const { Result } = require('../resultType')
+const Result = require('../resultType')
 
 module.exports = resolver => ({
   create_bucket: {
