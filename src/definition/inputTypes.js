@@ -17,12 +17,6 @@ const FieldOptions = new GraphQLInputObjectType({
     },
     item: {
       type: FieldOptions
-    },
-    es_indexed: {
-      type: GraphQLBoolean
-    },
-    es_keyword: {
-      type: GraphQLBoolean
     }
   })
 })

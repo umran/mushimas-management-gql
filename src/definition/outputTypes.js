@@ -17,12 +17,6 @@ const FieldOptions = new GraphQLObjectType({
     },
     item: {
       type: FieldOptions
-    },
-    es_indexed: {
-      type: GraphQLBoolean
-    },
-    es_keyword: {
-      type: GraphQLBoolean
     }
   })
 })
