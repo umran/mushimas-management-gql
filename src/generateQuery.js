@@ -1,18 +1,11 @@
 const { GraphQLObjectType, GraphQLString, GraphQLNonNull } = require('graphql')
+const generateDefinition = require('./definition/generateQueries')
+const generateBucket = require('./bucket/generateQueries')
 
 module.exports = resolver => new GraphQLObjectType({
   name: 'Query',
   fields: {
-    echo: {
-      type: GraphQLString,
-      args: {
-        echo: {
-          type: new GraphQLNonNull(GraphQLString)
-        }
-      },
-      resolve: async (root, args, context) => {
-        return args.echo
-      }
-    }
+    ...generateDefinition(resolver),
+    ...generateBucket(resolver)
   }
 })
