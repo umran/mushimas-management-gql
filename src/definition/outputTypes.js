@@ -2,7 +2,7 @@ const { GraphQLObjectType, GraphQLList, GraphQLID, GraphQLString, GraphQLBoolean
 const { GraphQLDateTime } = require('graphql-iso-date')
 
 const FieldOptions = new GraphQLObjectType({
-  name: 'fieldOptions',
+  name: 'FieldOptions',
   fields: () => ({
     type: {
       type: GraphQLString
@@ -23,7 +23,7 @@ const FieldOptions = new GraphQLObjectType({
 })
 
 const Field = new GraphQLObjectType({
-  name: 'field',
+  name: 'Field',
   fields: () => ({
     name: {
       type: GraphQLString
@@ -35,7 +35,7 @@ const Field = new GraphQLObjectType({
 })
 
 const Definition = new GraphQLObjectType({
-  name: 'definition',
+  name: 'Definition',
   fields: () => ({
     _id: {
       type: GraphQLID

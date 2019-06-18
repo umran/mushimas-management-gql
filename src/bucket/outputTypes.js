@@ -2,7 +2,7 @@ const { GraphQLObjectType, GraphQLList, GraphQLID, GraphQLString, GraphQLBoolean
 const { GraphQLDateTime } = require('graphql-iso-date')
 
 const Bucket = new GraphQLObjectType({
-  name: 'bucket',
+  name: 'Bucket',
   fields: () => ({
     _id: {
       type: GraphQLID

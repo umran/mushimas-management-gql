@@ -1,7 +1,7 @@
 const { GraphQLInputObjectType, GraphQLString, GraphQLBoolean, GraphQLNonNull } = require('graphql')
 
 const FieldOptions = new GraphQLInputObjectType({
-  name: 'fieldOptions',
+  name: '_FieldOptions',
   fields: () => ({
     type: {
       type: GraphQLString
@@ -22,7 +22,7 @@ const FieldOptions = new GraphQLInputObjectType({
 })
 
 const Field = new GraphQLInputObjectType({
-  name: 'field',
+  name: '_Field',
   fields: () => ({
     name: {
       type: new GraphQLNonNull(GraphQLString)
