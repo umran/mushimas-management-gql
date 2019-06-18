@@ -1,6 +1,6 @@
 {
   "name": "mushimas-management-gql",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "graphql api for mushimas management",
   "main": "lib.js",
   "directories": {
